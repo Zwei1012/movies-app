@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { MovieComponent } from './pages/movie/movie.component';
 import { MoviesComponent } from './pages/movies/movies.component';
 
 const routes: Routes = [
   {
     path: '',
-    component:HomeComponent
+    component: HomeComponent
   },
   {
     path: 'movies',
-    component:MoviesComponent
+    component: MoviesComponent
+  },
+  {
+    path: 'movie/:id',
+    component: MovieComponent
   },
   {
     path: '**',
@@ -22,4 +27,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
