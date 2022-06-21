@@ -6,7 +6,7 @@ import { Movie } from '../../models/movie';
   templateUrl: './items-banner.component.html',
   styleUrls: ['./items-banner.component.scss']
 })
-export class ItemsBannerComponent  {
+export class ItemsBannerComponent {
   @Input() items: Movie[] = [];
   @Input() title: string = '';
 }
